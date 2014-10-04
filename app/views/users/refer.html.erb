@@ -1,7 +1,6 @@
 <div class="header">
     <div class="content">
-        <p class="brandon">Welcome! It looks like you take your wrestler's nutrition seriously.</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
+        <p class="brandon" style="text-transform:none">Welcome! It looks like you take your wrestler's nutrition seriously.</p>
     </div>
 </div>
 
@@ -15,9 +14,9 @@
             <p class="title brandon">Invite Your Friends in the Wrestling Community and Receive Free Product
             <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and get rewarded</p>
             <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+            <% twitter_message = "#HERO is launching a recovery bar made just for wrestlers. Check it out and taste it for free!" %>
             <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=HERO is launching a recovery bar made just for wrestlers. Check it out and taste it for free!" class="fb" target="_blank"></a>
                 <div class="sep"></div>
                 <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
             </div>
@@ -45,12 +44,12 @@
     <div class="page-content">
         <p class="callout brandon"><!-- Here's How It Works: --> </p>
         <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards" style="color:#10c5f3;">HERO Product</p></li>
+            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards" >HERO Product</p></li>
             <% stops.each do |stop| %>
                 <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
                     <div class="circle"><%= stop["count"] %></div>
                     <div class="sep"></div>
-                    <p><%= stop["html"].html_safe %></p>
+                    <p style="color:#515151"><%= stop["html"].html_safe %></p>
 
                     <div class="tooltip">
                         <img src="<%= stop["image"] %>" height="254">
@@ -76,13 +75,14 @@
         %>
 
         <% if referrals_count == 0 %>
-            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+            <p class="place brandon">No friends have joined...Yet!</p>
         <% else %>
             <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
         <% end %>
         <p class="check brandon">Keep checking</p>
-
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
+<!---
+        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p> 
+ -->              
         <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
     </div>
 </div>
