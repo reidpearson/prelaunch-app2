@@ -1,0 +1,8 @@
+pkg/*
+*.gem
+.bundle
+bundler
+cache
+*.swp
+*~
+tmp
