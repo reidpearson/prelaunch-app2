@@ -15,21 +15,21 @@ class User < ActiveRecord::Base
             'count' => 5,
             "html" => "HERO Recovery <br>Bar",
             "class" => "two",
-            "image" =>  ActionController::Base.helpers.asset_path("refer/cream-tooltip@2x.png")
+            "image" =>  ActionController::Base.helpers.asset_path("refer/Web-App-Thumbnail-Image-1.jpg")
         },
         {
             'count' => 15,
             "html" => "HERO Recovery <br>Bar Pack",
             #"html" => "Truman Handle<br>w/ Blade",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("refer/truman@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/Web-App-Thumbnail-Image-2.jpg")
         },
         {
             'count' => 30,
             "html" => "HERO Recovery <br>Bar Pack + HERO Shirt",
             #"html" => "Winston<br>Shave Set",
             "class" => "four",
-            "image" => ActionController::Base.helpers.asset_path("refer/winston@2x.png")
+            "image" => ActionController::Base.helpers.asset_path("refer/Web-App-Thumbnail-Image-3.jpg")
         },
         #{
         #    'count' => 50,
